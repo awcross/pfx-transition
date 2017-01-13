@@ -16,9 +16,11 @@ $ npm install --save pfx-transition
 const transition = require('pfx-transition');
 
 const slides = document.querySelectorAll('.slide');
-slides.addEventListener(transition.end, () => {
-	// the transition has finished
-}, false);
+slides.forEach(slide => {
+	slide.addEventListener(transition.end, () => {
+		// the transition has finished
+	}, false);
+});
 ```
 
 
