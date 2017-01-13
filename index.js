@@ -1,8 +1,8 @@
 'use strict';
 
-const pfx = require('pfx');
+var pfx = require('pfx');
 
-const prefixedEvents = {
+var prefixedEvents = {
 	WebkitTransition: {
 		start: 'webkitTransitionStart',
 		end: 'webkitTransitionEnd'
@@ -24,4 +24,4 @@ const prefixedEvents = {
 	}
 };
 
-module.exports = () => prefixedEvents[pfx('transition')];
+module.exports = prefixedEvents[pfx('transition')];
